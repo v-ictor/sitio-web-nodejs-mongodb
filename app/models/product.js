@@ -13,7 +13,7 @@ const productSchema = new mongoose.Schema({
     category: {
         type: String,
         required: true,
-        enum: ['Ninos','Hogar','Entretenimiento']
+        enum: ['Ninos', 'Hogar', 'Entretenimiento']
     },
     stock: {
         type: Number,
