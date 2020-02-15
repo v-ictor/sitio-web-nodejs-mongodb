@@ -25,7 +25,8 @@ function login(req, res) {
                         payload = {
                             username: user.username,
                             email: user.email,
-                            name: user.name
+                            name: user.name,
+                            role: user.role
                         }
                         jwt.sign(payload, CONFIG.SECRET_TOKEN, function (error, token) {
                             if (error) {

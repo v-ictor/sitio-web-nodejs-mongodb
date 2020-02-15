@@ -7,6 +7,10 @@ const Product = require('./routes/productRoutes');
 const User = require('./routes/userRoutes');
 const Auth = require('./routes/authRoutes');
 
+const authToken = require('./middlewares/authToken');
+
+app.use(authToken);
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: false
